@@ -11,8 +11,8 @@ function App() {
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         gl={{ antialias: true, alpha: true }}
+        style={{ background: 'transparent' }}
       >
-        <color attach="background" args={['#000000']} />
         
         {/* 현실적인 구름 조명 설정 */}
         <ambientLight intensity={0.4} color="#87CEEB" />
