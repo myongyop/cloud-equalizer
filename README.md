@@ -1,134 +1,134 @@
 # Cloud Equalizer 🎵☁️
 
-> 소리에 반응하는 3D 구름 이퀄라이저 - 음악과 함께 춤추는 구름들을 경험해보세요!
+> Audio-reactive 3D cloud equalizer - Experience clouds dancing with your music!
 
 ![Cloud Equalizer Screenshot](./screen.png)
 
-**React.js**, **Three.js**, **WebGL**을 사용하여 실시간 오디오 시각화를 구현한 인터랙티브 웹 애플리케이션입니다.
+An interactive web application that implements real-time audio visualization using **React.js**, **Three.js**, and **WebGL**.
 
-## ✨ 주요 기능
+## ✨ Key Features
 
-- 🎤 **실시간 마이크 입력** - 마이크를 통한 실시간 오디오 분석
-- ☁️ **3D 볼류메트릭 구름** - 현실적인 3D 구름 렌더링
-- 🎵 **주파수별 반응** - 베이스와 트레블에 따른 다른 시각 효과
-- 🌈 **오디오 반응형 색상** - 소리에 따라 변화하는 구름 색상
-- 💻 **실시간 코드 스크롤** - 오른쪽에 프로젝트 코드가 스크롤되는 사이버펑크 효과
-- 🖼️ **커스텀 배경** - veo.png 배경 이미지 지원
-- 🎮 **인터랙티브 카메라** - 마우스로 3D 뷰 조작 가능
+- 🎤 **Real-time Microphone Input** - Live audio analysis through microphone
+- ☁️ **3D Volumetric Clouds** - Realistic 3D cloud rendering
+- 🎵 **Frequency-based Reactions** - Different visual effects for bass and treble
+- 🌈 **Audio-reactive Colors** - Cloud colors that change with sound
+- 💻 **Live Code Scrolling** - Cyberpunk-style code scroller on the right side
+- 🖼️ **Custom Background** - Support for veo.png background image
+- 🎮 **Interactive Camera** - Mouse-controlled 3D view manipulation
 
-## 🚀 빠른 시작
+## 🚀 Quick Start
 
-### 설치
+### Installation
 
 ```bash
-# 저장소 클론
+# Clone the repository
 git clone https://github.com/your-username/cloud-equalizer.git
 cd cloud-equalizer
 
-# 의존성 설치
+# Install dependencies
 npm install
 
-# 개발 서버 시작
+# Start development server
 npm start
 ```
 
-브라우저에서 `http://localhost:3000`으로 접속하세요.
+Open your browser and navigate to `http://localhost:3000`.
 
-### 사용법
+### Usage
 
-1. **🎤 마이크 아이콘 클릭** - 오른쪽 상단의 마이크 버튼을 클릭
-2. **권한 허용** - 브라우저에서 마이크 접근 권한을 허용
-3. **음악 재생** - 음악을 재생하거나 소리를 내면 구름이 반응합니다
-4. **카메라 조작** - 마우스 드래그로 3D 뷰를 회전시킬 수 있습니다
+1. **🎤 Click Microphone Icon** - Click the microphone button in the top-right corner
+2. **Grant Permission** - Allow microphone access in your browser
+3. **Play Music** - Play music or make sounds to see the clouds react
+4. **Camera Control** - Drag with mouse to rotate the 3D view
 
-## 🎨 스크린샷
+## 🎨 Screenshots
 
 ![Cloud Equalizer in Action](./screen.png)
 
-*실시간으로 음악에 반응하는 3D 구름들과 사이버펑크 스타일의 코드 스크롤러*
+*3D clouds reacting to music in real-time with cyberpunk-style code scroller*
 
-## 🛠️ 기술 스택
+## 🛠️ Tech Stack
 
 ### Frontend
-- **React.js** `^18.2.0` - UI 프레임워크
-- **Three.js** `^0.160.0` - 3D 그래픽스 라이브러리
-- **@react-three/fiber** `^8.15.19` - React Three.js 통합
-- **WebGL** - 하드웨어 가속 렌더링
+- **React.js** `^18.2.0` - UI Framework
+- **Three.js** `^0.160.0` - 3D Graphics Library
+- **@react-three/fiber** `^8.15.19` - React Three.js Integration
+- **WebGL** - Hardware-accelerated Rendering
 
 ### Audio Processing
-- **Web Audio API** - 실시간 오디오 분석
-- **AudioContext** - 오디오 컨텍스트 관리
-- **AnalyserNode** - 주파수 분석
+- **Web Audio API** - Real-time Audio Analysis
+- **AudioContext** - Audio Context Management
+- **AnalyserNode** - Frequency Analysis
 
 ### Shaders
-- **GLSL** - 커스텀 버텍스/프래그먼트 셰이더
-- **볼류메트릭 렌더링** - 현실적인 구름 효과
+- **GLSL** - Custom Vertex/Fragment Shaders
+- **Volumetric Rendering** - Realistic Cloud Effects
 
-## 📁 프로젝트 구조
+## 📁 Project Structure
 
 ```
 src/
 ├── components/
-│   ├── CloudEqualizer.js    # 3D 구름 렌더링 및 오디오 반응
-│   ├── AudioController.js   # 마이크 입력 및 UI 컨트롤
-│   ├── CameraControls.js    # 3D 카메라 조작
-│   ├── CodeScroller.js      # 실시간 코드 스크롤러
-│   └── CodeScroller.css     # 코드 스크롤러 스타일
+│   ├── CloudEqualizer.js    # 3D cloud rendering and audio reaction
+│   ├── AudioController.js   # Microphone input and UI controls
+│   ├── CameraControls.js    # 3D camera manipulation
+│   ├── CodeScroller.js      # Real-time code scroller
+│   └── CodeScroller.css     # Code scroller styles
 ├── store/
-│   └── audioStore.js        # 오디오 데이터 상태 관리
-├── App.js                   # 메인 애플리케이션
-├── App.css                  # 글로벌 스타일
-└── index.js                 # 엔트리 포인트
+│   └── audioStore.js        # Audio data state management
+├── App.js                   # Main application
+├── App.css                  # Global styles
+└── index.js                 # Entry point
 ```
 
-## 🎯 주요 특징
+## 🎯 Key Features
 
-### 🌤️ 현실적인 구름 렌더링
-- 프랙탈 노이즈 기반 구름 형태 생성
-- 커스텀 GLSL 셰이더로 볼류메트릭 효과
-- 프레넬 효과와 서브서피스 스캐터링
+### 🌤️ Realistic Cloud Rendering
+- Fractal noise-based cloud shape generation
+- Custom GLSL shaders for volumetric effects
+- Fresnel effects and subsurface scattering
 
-### 🎵 오디오 반응 시스템
-- 실시간 FFT 분석 (256 샘플)
-- 베이스/트레블 주파수 분리
-- 높이별 차등 반응 (베이스는 아래, 트레블은 위)
+### 🎵 Audio Reaction System
+- Real-time FFT analysis (256 samples)
+- Bass/treble frequency separation
+- Height-based differential reactions (bass below, treble above)
 
-### 💫 시각 효과
-- 오디오 레벨에 따른 구름 변형
-- 색상 변화 (베이스: 파란빛, 트레블: 따뜻한 빛)
-- 부드러운 애니메이션과 회전
+### 💫 Visual Effects
+- Cloud deformation based on audio levels
+- Color changes (bass: blue light, treble: warm light)
+- Smooth animations and rotations
 
-### 🖥️ 사이버펑크 UI
-- 반투명 마이크 컨트롤 (펄스 애니메이션)
-- 실시간 코드 스크롤러 (글리치 효과)
-- 커스텀 배경 이미지 지원
+### 🖥️ Cyberpunk UI
+- Semi-transparent microphone control (pulse animation)
+- Real-time code scroller (glitch effects)
+- Custom background image support
 
-## 🌐 브라우저 호환성
+## 🌐 Browser Compatibility
 
-| 브라우저 | 지원 버전 | 특이사항 |
-|---------|----------|---------|
-| Chrome | 80+ | ✅ 완전 지원 |
-| Firefox | 75+ | ✅ 완전 지원 |
-| Safari | 14+ | ✅ 완전 지원 |
-| Edge | 80+ | ✅ 완전 지원 |
+| Browser | Supported Version | Notes |
+|---------|------------------|-------|
+| Chrome | 80+ | ✅ Full Support |
+| Firefox | 75+ | ✅ Full Support |
+| Safari | 14+ | ✅ Full Support |
+| Edge | 80+ | ✅ Full Support |
 
-### 요구사항
-- **HTTPS 환경** - 마이크 접근을 위해 필요
-- **WebGL 지원** - 3D 렌더링을 위해 필요
-- **Web Audio API** - 오디오 분석을 위해 필요
+### Requirements
+- **HTTPS Environment** - Required for microphone access
+- **WebGL Support** - Required for 3D rendering
+- **Web Audio API** - Required for audio analysis
 
-## 🎮 사용 팁
+## 🎮 Usage Tips
 
-- **최적의 경험**: 헤드폰이나 스피커로 음악을 재생하세요
-- **카메라 조작**: 마우스 드래그로 구름을 다양한 각도에서 감상
-- **오디오 품질**: 다양한 장르의 음악으로 다른 반응을 확인해보세요
-- **성능**: 고사양 그래픽 카드에서 더 부드러운 애니메이션 경험
+- **Optimal Experience**: Play music through headphones or speakers
+- **Camera Control**: Drag with mouse to view clouds from different angles
+- **Audio Quality**: Try different music genres to see various reactions
+- **Performance**: Better experience with high-end graphics cards
 
-## 📄 라이선스
+## 📄 License
 
-MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
+MIT License - Feel free to use, modify, and distribute.
 
-## 🤝 기여하기
+## 🤝 Contributing
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -136,8 +136,41 @@ MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## 🔧 Development
+
+### Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm build` - Builds the app for production
+- `npm test` - Launches the test runner
+- `npm eject` - Ejects from Create React App
+
+### Performance Optimization
+
+- Uses hardware-accelerated WebGL rendering
+- Optimized shader code for smooth animations
+- Efficient audio processing with minimal latency
+
+## 🎨 Customization
+
+### Background Image
+Replace `public/veo.png` with your own background image.
+
+### Cloud Colors
+Modify the color values in `CloudEqualizer.js`:
+```javascript
+vec3 bassColor = vec3(0.8, 0.9, 1.0) * bassLevel * 0.5;
+vec3 trebleColor = vec3(1.0, 0.9, 0.8) * trebleLevel * 0.3;
+```
+
+### Audio Sensitivity
+Adjust audio reaction sensitivity in the shader uniforms:
+```javascript
+float audioInfluence = audioLevel * 0.3; // Increase for more sensitivity
+```
+
 ---
 
 **Made with ❤️ and ☁️ by [Your Name]**
 
-*음악과 함께 춤추는 구름들을 경험해보세요!*
+*Experience clouds dancing with your music!*
