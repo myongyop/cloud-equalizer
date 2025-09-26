@@ -1,0 +1,125 @@
+.code-scroller {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.1) 20%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.code-content {
+  position: relative;
+  height: 200%;
+  animation: scrollUp 15s linear infinite;
+}
+
+.code-block {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  padding: 20px;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: 
+    fadeInOut 4s ease-in-out infinite,
+    glitch 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(0, 255, 255, 0.3),
+      0 0 10px rgba(0, 255, 255, 0.2),
+      0 0 15px rgba(0, 255, 255, 0.1);
+  }
+  25% {
+    text-shadow: 
+      0 0 5px rgba(255, 0, 255, 0.3),
+      0 0 10px rgba(255, 0, 255, 0.2),
+      0 0 15px rgba(255, 0, 255, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 0, 0.3),
+      0 0 10px rgba(255, 255, 0, 0.2),
+      0 0 15px rgba(255, 255, 0, 0.1);
+  }
+  75% {
+    text-shadow: 
+      0 0 5px rgba(0, 255, 0, 0.3),
+      0 0 10px rgba(0, 255, 0, 0.2),
+      0 0 15px rgba(0, 255, 0, 0.1);
+  }
+  100% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.2),
+      0 0 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* 코드 하이라이팅 */
+.code-block code {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 키워드 하이라이팅 효과 */
+.code-block:hover {
+  animation-play-state: paused;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .code-scroller {
+    width: 300px;
+  }
+  
+  .code-block {
+    font-size: 10px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-scroller {
+    width: 250px;
+  }
+  
+  .code-block {
+    font-size: 9px;
+    padding: 10px;
+  }
+}

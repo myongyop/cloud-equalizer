@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import CloudEqualizer from './components/CloudEqualizer';
 import AudioController from './components/AudioController';
 import CameraControls from './components/CameraControls';
+import CodeScroller from './components/CodeScroller';
 import './App.css';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       </Canvas>
       
       <AudioController />
+      <CodeScroller />
     </div>
   );
 }
